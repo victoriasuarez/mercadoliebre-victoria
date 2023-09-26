@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Krub&family=Roboto&display=swap');
+
+:root {
+    --yellow: #EAC926;
+    --blue: #03264C;
+    --skyblue: #1259c3;
+    --dark-grey: #666;
+    --light-grey: #ebebeb;
+    --green: #39b54a;
+}
+
+div.container-login h2 {
+    margin-top: 20%;
+}
+
+main {
+    background-color: var(--light-grey);
+    width: 50%;
+    margin: 50px auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.input-user input,
+.input-pass input {
+    width: 60%;
+}
+
+.form-container div input {
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 8px;
+}
+
+div.container-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+form div {
+    margin: 10% 0;
+}
+
+
+
+div.input-button button {
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--skyblue);
+}
+
+div.input-button {
+    padding: 15px;
+}
+
+/* Mobile */
+@media (max-width: 360px) {
+
+    div.container-login h2 {
+        font-size: 20px;
+    }
+
+    main {
+        width: 80%;
+        margin: 30px auto;
+    }
+
+}
+
+/* Tablet */
+@media (min-width: 361px) {
+
+    div.container-login h2 {
+        font-size: 20px;
+    }
+
+
+}

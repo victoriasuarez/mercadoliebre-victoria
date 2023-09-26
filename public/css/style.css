@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Krub&family=Roboto&display=swap');
+
+:root {
+    --yellow: #EAC926;
+    --blue: #03264C;
+    --skyblue: #1259c3;
+    --dark-grey: #666;
+    --light-grey: #ebebeb;
+    --green: #39b54a;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* Tipografía */
+
+h2 {
+    font-size: 24px;
+}
+
+footer div {
+    font-size: 12px;
+}
+
+/* Header*/
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo {
+    width: 30%;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.logo, .search-bar, .comprar {
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.search-bar input, .search-bar button {
+    font-size: 19px;
+}
+
+header {
+    background-color: var(--yellow);
+}
+
+h4.comprar {
+    display: flex;
+    justify-content: center;
+}
+
+nav.main-navbar ul {
+    padding: 0;
+    list-style: none;
+}
+
+nav.main-navbar ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+div.nav-izquierda {
+    padding: 20px 0 20px 0;
+}
+
+div.burger-menu {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+div.burger-menu i {
+    background-color: var(--skyblue);
+    padding: 5px;
+    border-radius: 3px;
+    color: white;
+}
+
+
+/* Footer */
+footer div i {
+    font-size: 2em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: var(--skyblue);
+}
+
+div.item-footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 15px 20px 15px;
+}
+
+div.item-footer h3,
+div.item-footer span,
+p.Copyright {
+    color: var(--dark-grey);
+}
+
+p.Copyright {
+    padding: 10px;
+    font-size: 13px;
+}
+
+section.articulos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+/* Mobile */
+@media (max-width: 360px) {
+
+    .logo .search-bar {
+        width: 50%;
+    }
+
+    .nav-derecha,
+    .nav-izquierda {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .icon-item {
+        flex: 1;
+        text-align: center;
+    }
+
+    .Copyright {
+        margin-top: 20px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .logo, .search-bar{
+        width: 50%;
+        box-sizing: border-box;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+
+    .search-bar input, .search-bar button {
+        font-size: 12px;
+    }
+
+}
+
+/* Tablet */
+@media (min-width: 361px) {
+
+    .nav-derecha,
+    .nav-izquierda {
+        display: block;
+    }
+
+    div.burger-menu i.fas.fa-bars {
+        display: none;
+        /* Ocultar el menú hamburguesa en tablet */
+    }
+
+    
+    .main-navbar {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        flex-wrap: wrap;
+
+    }
+
+    .main-navbar ul {
+        display: flex;
+    }
+
+    .main-navbar li {
+        margin: 0 15px;
+    }
+
+    .main-navbar {
+        margin-top: 50px;
+    }
+
+    .icon-item {
+        flex: 1;
+        text-align: center;
+    }
+
+    .Copyright {
+        margin-top: 20px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .logo, .search-bar, .comprar {
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+    .search-bar input, .search-bar button {
+        font-size: 12px;
+    }
+
+}
+
+/* Desktop */
+
+@media (min-width: 769px) {
+
+    
+    .burger-menu {
+        display: none;
+    }
+
+    /* footer {
+        text-align: center;
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px
+    }
+
+
+    footer section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    } */
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    
+    .item-footer {
+        width: 30%;
+        margin-bottom: 20px; /* Ajusta el margen según lo necesites */
+        text-align: center;
+    }
+    
+    .Copyright {
+        text-align: center;
+        width: 100%;
+    }
+
+    .main-navbar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main-navbar ul {
+        display: flex;
+    }
+
+    .main-navbar li {
+        margin: 0 15px;
+    }
+
+    .main-navbar {
+        margin-top: 50px;
+    }
+
+    .icon-item {
+        flex: 1;
+        text-align: center;
+        cursor: pointer;
+        transition: color 0.3s ease-in-out;
+        list-style: none;
+    }
+
+    .icon-item:hover i {
+        color: #ff6600;
+    }
+
+    .icon-item h3 {
+        margin-bottom: 10px;
+    }
+
+
+    /* .Copyright {
+        margin-top: 20px;
+        font-size: 14px;
+    } */
+
+    .search-bar input, .search-bar button {
+        font-size: 20px;
+    }
+
+
+
+}

@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Krub&family=Roboto&display=swap');
+
+:root {
+    --yellow: #EAC926;
+    --blue: #03264C;
+    --skyblue: #1259c3;
+    --dark-grey: #666;
+    --light-grey: #ebebeb;
+    --green: #39b54a;
+}
+
+
+.precio {
+    font-size: 18px;
+}
+
+.descuento,
+.nombre-producto {
+    font-size: 16px;
+}
+
+/* Banner*/
+.banner img {
+    width: 100%;
+}
+
+/* Main */
+main {
+    background-color: var(--light-grey);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Card */
+article.item {
+    margin: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5%;
+}
+
+section h2 {
+    padding: 10px;
+    color: var(--dark-grey);
+}
+
+div.imagen-carrito {
+    position: relative;
+}
+
+/* Camion envio*/
+.imagen-carrito i {
+    color: var(--green);
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--green);
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+/* Linea de card y tamaño de línea precio/descuento*/
+.precio-descuento {
+    display: flex;
+    border-top: 2px solid var(--light-grey);
+    padding: 15px;
+}
+
+p.precio {
+    width: 30%;
+}
+
+p.descuento {
+    width: 70%;
+}
+
+/* Porcentaje descuento*/
+p.descuento {
+    color: var(--green);
+}
+
+/* Nombre producto*/
+h4.nombre-producto {
+    color: var(--dark-grey);
+    padding: 15px;
+}
+
+/*Imagen card*/
+article.item img {
+    width: 100%;
+}
+
+
+/* Ocultar la descripción del producto por defecto */
+.nombre-producto {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+/* Mostrar la descripción cuando el mouse pasa por encima */
+.item:hover .nombre-producto {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s;
+}
+
+/* Añadir sombra cuando el mouse pasa por encima */
+.item:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Giro del ícono del camión de envío */
+.imagen-carrito i {
+    transition: transform 0.5s ease;
+}
+
+.imagen-carrito i:hover {
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+
+
+
+
+/*  mobile (máximo ancho de 360px) */
+@media (max-width: 360px) {
+
+
+    .nombre-producto {
+        display: none;
+    }
+
+    article.item {
+        flex-basis: 100%;
+    }
+
+    div.container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+}
+
+/*  tablet (mínimo ancho de 361px) */
+@media (min-width: 361px) {
+    article.item {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        flex-basis: calc(50% - 10px);
+        box-sizing: border-box;
+        margin: 5px;
+    }
+
+    .header {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    /* Linea de card y tamaño de línea precio/descuento*/
+    .precio-descuento {
+        display: flex;
+        border-top: 2px solid var(--light-grey);
+        padding: 15px;
+    }
+
+
+}
+
+/* desktop (mínimo ancho de 769px) */
+
+@media (min-width: 769px) {
+    article.item {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        flex: 1 0 calc(25% - 10px);
+        box-sizing: border-box;
+        margin: 5px;
+    }
+
+    .precio-descuento {
+        display: flex;
+        border-top: 3px solid var(--light-grey);
+        padding: 15px;
+    }
+
+    
+}
